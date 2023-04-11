@@ -56,11 +56,12 @@
             margin-bottom: 1.8em;
 
             .ico {
+              display: flex;
               position: absolute;
               left: 0;
               top: 0.1em;
-              width: 1.1em;
-              height: 1.1em;
+              width: 1em;
+              height: 1em;
 
               svg {
                 width: 100%;
@@ -218,6 +219,9 @@
         align-items: center;
         gap: 30px;
 
+        .logo {
+          width: 140px;
+        }
         &-group {
           display: flex;
           flex-direction: column-reverse;
@@ -285,6 +289,9 @@
           p {
             font-size: 16px;
           }
+        }
+        .logo {
+          width: 120px;
         }
       }
       &-content {

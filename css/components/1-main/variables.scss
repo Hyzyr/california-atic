@@ -34,6 +34,7 @@ $white-main: #a7c4c6;
 $white: #fff;
 $white-bg: #e4f1f4;
 $black: #101010;
+$black-main: mix($black, $main, 80%);
 $black-0: #000;
 
 $font-primary: "Roboto", sans-serif;

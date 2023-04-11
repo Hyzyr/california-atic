@@ -39,7 +39,7 @@
       top: 0;
       right: 0;
       height: 100%;
-      width: calc(100% - 550px);
+      width: calc(100% - 520px);
 
       img {
         width: 100%;
@@ -182,8 +182,10 @@
       margin: -10px;
     }
     &-item {
+      position: relative;
       width: calc(33.3% - 20px);
       margin: 10px;
+      z-index: 0;
 
       .ratioImage {
         padding-bottom: 90%;
@@ -205,6 +207,19 @@
       }
 
       &-title {
+        position: absolute;
+        z-index: 1;
+        left: 1.8em;
+        bottom: 1.8em;
+
+        //font
+        color: $white-main;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.2;
+        font-variant: all-small-caps;
+        z-index: 1;
       }
     }
     &-footer {
@@ -321,6 +336,203 @@
         background: url(../../../images/icons/quote.svg);
         background-repeat: no-repeat;
         background-size: 100% 100%;
+      }
+    }
+  }
+}
+
+@mixin index-1160 {
+  .hero {
+    &__inner {
+      &-content {
+        min-height: 45vh;
+      }
+    }
+  }
+  .about {
+    padding: 100px 0;
+    &__inner {
+      &-banner {
+        width: calc(100% - 450px);
+      }
+      &-content {
+        width: 420px;
+      }
+    }
+  }
+  .services {
+    padding: 100px 0;
+  }
+  .serviceInfo {
+    padding: 100px 0;
+
+    &__inner {
+      &-content {
+        width: 420px;
+      }
+      &-banner {
+        width: calc(100% - 450px);
+      }
+    }
+  }
+}
+@mixin index-1025 {
+  .hero {
+    &__inner {
+      &-content {
+        min-height: 40vh;
+        max-width: 450px;
+      }
+      &-banner {
+        width: calc(100% - 470px);
+      }
+    }
+  }
+}
+@mixin index-940 {
+  .hero {
+    &__inner {
+      &-content {
+        padding: unset;
+        min-height: unset;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+
+        h1 {
+          width: 100%;
+          max-width: 450px;
+          margin: 0 auto 0.56em auto;
+        }
+        p {
+          margin: 0 auto;
+        }
+      }
+      &-banner {
+        position: unset;
+        width: 100%;
+      }
+    }
+    &__form {
+      max-width: 700px;
+      margin: 0 auto;
+      margin-top: 40px;
+      padding-top: 60px;
+      border-top: 1px solid $white-main;
+
+      &-group {
+        flex-direction: column;
+
+        .input {
+          width: 100%;
+        }
+        .button {
+          width: 90%;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .about {
+    padding: 80px 0;
+    &__inner {
+      h2 {
+        margin-bottom: 3em;
+      }
+      &-content {
+        width: 100%;
+        max-width: unset;
+      }
+      &-banner {
+        position: relative;
+        width: 80%;
+        top: unset;
+        right: unset;
+        max-width: unset;
+        margin: 0 auto 2em auto;
+      }
+    }
+  }
+  .dream {
+    padding: 80px 0;
+    &__inner {
+      &-row {
+        flex-wrap: wrap;
+        margin: 0 -20px;
+      }
+      &-item {
+        width: calc(50% - 20px);
+        margin: 10px;
+      }
+    }
+  }
+  .services {
+    padding: 80px 0;
+
+    &__inner {
+      &-row {
+        flex-wrap: wrap;
+        margin: 0 -20px;
+      }
+      &-item {
+        width: calc(50% - 20px);
+        margin: 10px;
+      }
+    }
+  }
+  .serviceInfo {
+    padding: 80px 0;
+
+    &__inner {
+      &-content {
+        width: 100%;
+        max-width: unset;
+      }
+      &-banner {
+        position: unset;
+        transform: unset;
+        width: 90%;
+        max-width: 650px;
+        padding: 20px 0;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@mixin index-580 {
+  .dream {
+    padding: 40px 0;
+
+    &__inner {
+      &-row {
+        flex-direction: column;
+        margin: 0;
+      }
+      &-item {
+        width: 100%;
+        margin: 0;
+        max-width: unset;
+      }
+    }
+  }
+  .services {
+    padding: 40px 0;
+
+    &__inner {
+      &-row {
+        flex-direction: column;
+        margin: 0;
+        gap: 16px;
+      }
+      &-item {
+        width: 100%;
+        margin: 0;
+        max-width: unset;
       }
     }
   }

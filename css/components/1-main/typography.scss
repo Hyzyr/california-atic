@@ -39,3 +39,41 @@ p {
     font-size: 16px;
   }
 }
+
+@mixin typography-1025 {
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+@mixin typography-768 {
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  p {
+    &._sm {
+      font-size: 14px;
+    }
+  }
+}

@@ -5,8 +5,6 @@
   width: 100%;
   padding: 30px 0;
   z-index: 1;
-  transition: 0.2s ease-out;
-  transition-property: opacity, transform, padding;
   background: $main;
 
   &__inner {
@@ -27,13 +25,20 @@
   &.sticky {
     position: fixed;
     padding: 20px 0;
-    border-bottom: 1px solid rgba($main, 0.4);
+    border-bottom: 1px solid rgba($white-bg, 0.4);
     animation: 0.3s sticky ease-in;
-    transition-duration: 0.5s;
+    transition: 0.5s ease-out;
+    transition-property: opacity, transform, padding;
+
+    .nav__inner {
+      .logo {
+        width: 100px;
+      }
+    }
   }
 
   & + section {
-    margin-top: 140px;
+    margin-top: 139px;
   }
 }
 .nav {
@@ -51,9 +56,9 @@
       position: relative;
       display: flex;
       align-items: center;
-      padding: 8px 20px;
+      padding: 0.5em 1.25em;
       //font
-      color: $white;
+      color: $white-bg;
       font-family: $font-primary;
       font-style: normal;
       font-weight: 400;
@@ -61,38 +66,40 @@
       line-height: 1;
       transition: 0.3s ease-out;
 
-      &._sm {
-        padding: 5px 10px;
-      }
-      svg {
-        width: 1.5em;
-        height: 1.5em;
-        margin-right: 0.7em;
-      }
       &:after {
         content: "";
         display: block;
         position: absolute;
         bottom: -3px;
         left: 50%;
-        height: 0;
+        height: 2px;
         width: 60%;
-        background: $main;
+        background: $white-main;
         opacity: 0;
         transition: 0.3s ease-out;
         transform: translateX(-50%);
       }
       &:hover {
-        color: $white-main;
-
+        &:after {
+          opacity: 0.4;
+          width: calc(100% - 2.6em);
+        }
+      }
+      &.active {
+        color: $white;
         &:after {
           opacity: 1;
-          height: 2px;
-          width: 80%;
+          width: calc(100% - 2.6em);
         }
       }
     }
     .logo {
+      width: 145px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
@@ -156,6 +163,42 @@
   }
 }
 
+@mixin header-1366 {
+  .header {
+    & + section {
+      margin-top: 130px;
+    }
+  }
+  .nav__inner {
+    .logo {
+      width: 130px;
+    }
+  }
+}
+@mixin header-1280 {
+  .header {
+    & + section {
+      margin-top: 120px;
+    }
+
+    &.sticky {
+      .nav__inner {
+        .logo {
+          width: 80px;
+        }
+      }
+    }
+  }
+  .nav__inner {
+    .logo {
+      width: 110px;
+    }
+    &-link {
+      font-size: 14px;
+      padding: 0.5em 0.8em;
+    }
+  }
+}
 @mixin header-1025 {
   .header {
     padding: 25px 0;
@@ -163,15 +206,22 @@
     &__inner {
       justify-content: space-between;
 
-      &-logo {
+      & > .logo {
+        display: block;
         padding-right: 20px;
-        border-right: 2px solid rgba($white, 0.27);
-        border: 0;
+        width: 110px;
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
       .burger {
         display: block;
         z-index: 2;
       }
+    }
+    & + section {
+      margin-top: 100px;
     }
   }
   .nav {
@@ -180,7 +230,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba($black, 0.4);
+    background: rgba($white, 0.1);
     backdrop-filter: blur(4px);
     z-index: 0;
     transform: translate(100%);
@@ -199,7 +249,7 @@
       align-items: flex-start;
       justify-content: flex-start;
       box-sizing: border-box;
-      background: $white;
+      background: $white-main;
       box-shadow: 0px 4px 24px -1px rgba($black, 0.2);
       padding: 50px 25px;
       transform: translate(-100%);
@@ -209,34 +259,39 @@
       &-group {
         flex-direction: column;
         align-items: flex-start;
-        padding: 25px 0;
         gap: 8px;
         color: $black;
-        border-top: 1px solid $white-main;
         width: 100%;
-
-        &:first-child {
-          border: 0;
-        }
+        margin-bottom: 8px;
       }
       &-link {
-        color: $black;
+        color: $main;
 
         &:after {
           left: 0;
           top: 50%;
-          width: 2px;
+          width: 1.5px;
           height: 80%;
           transform: translateY(-50%);
+          background: $main;
         }
 
         &:hover {
           color: $main;
           &:after {
-            width: 2px;
-            height: 100%;
+            width: 1.5px;
           }
         }
+        &.active {
+          color: $black-main;
+          &:after {
+            width: 1.5px;
+            opacity: 1;
+          }
+        }
+      }
+      .logo {
+        order: -1;
       }
     }
 
