@@ -1,7 +1,9 @@
 $main: #3d5a5c;
-$main-1: #3d5a5c;
+$main-1: hsl(184, 20%, 30%);
 $white-main: #a7c4c6;
 $white: #fff;
+$white-1: #e2f0f1;
+$white-2: #a9c3c6;
 $white-bg: #e4f1f4;
 $black: #101010;
 $black-main: mix($black, $main, 80%);
@@ -9,4 +11,4 @@ $black-0: #000;
 
 $font-primary: "Roboto", sans-serif;
 $font-secondary: "Inter", sans-serif;
-$font-kaisei: "Kaisei Tokumin", $font-secondary;
+$font-kaisei: "Kaisei Decol", $font-secondary;

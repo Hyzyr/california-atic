@@ -125,6 +125,26 @@
       }
     }
   }
+  &__copyright {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 30px 0 10px 0;
+    .logo {
+      display: flex;
+      width: 145px;
+    }
+    &-text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1;
+      color: $white-2;
+      span {
+        color: $white-1;
+      }
+    }
+  }
 }
 
 @mixin footer-1280 {
@@ -134,6 +154,11 @@
         &-links {
           max-width: 760px;
         }
+      }
+    }
+    &__copyright {
+      .logo {
+        width: 130px;
       }
     }
   }
@@ -166,6 +191,11 @@
           max-width: unset;
           padding: 40px 0;
         }
+      }
+    }
+    &__copyright {
+      .logo {
+        width: 110px;
       }
     }
   }
@@ -206,6 +236,15 @@
         &-links {
           padding: 30px 0;
         }
+      }
+    }
+    &__copyright {
+      padding: 20px 0;
+      .logo {
+        width: 90px;
+      }
+      &-text {
+        font-size: 14px;
       }
     }
   }
@@ -255,6 +294,22 @@
         }
       }
     }
+    &__copyright {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 5px 0 0 0;
+      gap: 14px;
+      .logo {
+        width: 90px;
+
+        &:last-child {
+          display: none;
+        }
+      }
+      &-text {
+        font-size: 12px;
+      }
+    }
   }
 }
 
@@ -277,6 +332,12 @@
             margin-bottom: 10px;
           }
         }
+      }
+    }
+    &__copyright {
+      gap: 12px;
+      &-text {
+        font-size: 10px;
       }
     }
   }

@@ -40,6 +40,23 @@
   & + section {
     margin-top: 125px;
   }
+  &.header--logo {
+    padding: 28px 0 20px 0;
+
+    & + section {
+      margin-top: 113px;
+    }
+
+    .header {
+      &__inner {
+        .logo {
+          display: flex;
+          width: 145px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
 }
 .nav {
   flex-grow: 1;
@@ -230,6 +247,13 @@
     }
     & + section {
       margin-top: 79px;
+    }
+    &.header--logo {
+      padding: 20px 0;
+
+      & + section {
+        margin-top: 95px;
+      }
     }
   }
   .nav {
