@@ -695,7 +695,7 @@ li {
   margin-bottom: 20px;
 }
 .footer__inner-content-contacts {
-  width: 310px;
+  width: 325px;
 }
 .footer__inner-content-contacts ul li {
   position: relative;
@@ -718,6 +718,7 @@ li {
   height: 100%;
 }
 .footer__inner-content-contacts ul li p {
+  font-family: "Inter", sans-serif;
   font-weight: 200;
   font-size: 14px;
   line-height: 1.5;
@@ -740,7 +741,7 @@ li {
 .footer__inner-content-link {
   position: relative;
   color: rgba(167, 196, 198, 0.8);
-  font-family: #3d5a5c;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 200;
   font-size: 14px;
