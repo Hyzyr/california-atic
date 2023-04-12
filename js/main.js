@@ -70,9 +70,7 @@ document.querySelectorAll(`[data-toggle]`).forEach((toggleBtn) => {
 ///
 ///WOW JS
 window.onload = () => {
-  setTimeout(() => {
-    new WOW().init({
-      boxClass: "wow",
-    });
-  }, 200);
+  new WOW().init({
+    boxClass: "wow",
+  });
 };

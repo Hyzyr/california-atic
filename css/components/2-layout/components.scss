@@ -268,12 +268,12 @@
     position: relative;
     color: $white-bg;
     background: $main;
-    border-color: $white-main;
+    border-color: $white-bg;
 
     &:hover {
       color: $white;
-      background: $main-1;
-      border-color: $white;
+      background: $main;
+      border-color: $main;
     }
   }
   &--light {
@@ -670,4 +670,8 @@
     width: 10.1em;
     height: 5em;
   }
+}
+
+.hideOnDesktop {
+  display: none;
 }

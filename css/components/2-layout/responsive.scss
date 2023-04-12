@@ -16,6 +16,9 @@
   .autoContainer {
     padding: 0 30px;
   }
+  .hideOnDesktop {
+    display: block;
+  }
   @include typography-1025;
   @include footer-1025;
   @include header-1025;
@@ -30,7 +33,7 @@
 }
 @media (max-width: 768px) {
   .autoContainer {
-    padding: 0 15px;
+    padding: 0 20px;
   }
   @include typography-768;
   @include footer-768;
