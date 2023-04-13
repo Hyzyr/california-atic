@@ -73,8 +73,9 @@
       .input {
         width: 26.5%;
       }
-      .button {
+      .button--light {
         width: 16%;
+        background: $white;
       }
     }
   }
@@ -298,6 +299,11 @@
       .slick-list {
         overflow: visible;
       }
+    }
+    &-arrows {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
     }
   }
   &__item {
@@ -533,6 +539,13 @@
         max-width: 650px;
         padding: 20px 0;
         margin: 0 auto;
+      }
+    }
+  }
+  .testimonials {
+    &__inner {
+      &-arrows {
+        margin-top: 30px;
       }
     }
   }

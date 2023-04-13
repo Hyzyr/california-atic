@@ -47,6 +47,7 @@ input::-webkit-inner-spin-button {
 }
 
 body {
+  cursor: default;
   font-family: $font-primary, sans-serif;
   color: $black;
   font-size: 20px;
