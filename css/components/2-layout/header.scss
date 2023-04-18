@@ -254,6 +254,12 @@
         margin-top: 95px;
       }
     }
+    &.sticky {
+      padding: 10px 0;
+      .header__inner > .logo {
+        width: 100px;
+      }
+    }
   }
   .nav {
     position: fixed;

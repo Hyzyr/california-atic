@@ -38,6 +38,7 @@
   }
   @include index-940;
   @include contacts-940;
+  @include footer-940;
 }
 @media (max-width: 768px) {
   .autoContainer {
@@ -62,6 +63,7 @@
   @include typography-768;
   @include contacts-768;
   @include footer-768;
+  @include index-768;
 }
 @media (max-width: 580px) {
   ._hideMob {
